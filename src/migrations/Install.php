@@ -10,7 +10,7 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\migrations;
+namespace dotdefine\openweather\migrations;
 
 use Craft;
 use craft\db\Migration;

@@ -9,7 +9,7 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\models;
+namespace dotdefine\openweather\models;
 
 class OpenWeatherSettings extends \craft\base\Model
 {
