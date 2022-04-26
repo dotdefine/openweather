@@ -10,12 +10,12 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\controllers;
+namespace dotdefine\openweather\controllers;
 
 use Craft;
 use craft\web\Controller;
-use bolden\openweather\records\OpenWeatherEntry;
-use bolden\openweather\OpenWeather;
+use dotdefine\openweather\records\OpenWeatherEntry;
+use dotdefine\openweather\OpenWeather;
 
 /**
  * OpenWeather Controller

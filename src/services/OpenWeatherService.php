@@ -10,20 +10,20 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\services;
+namespace dotdefine\openweather\services;
 
 use Craft;
 use craft\base\Component;
 use craft\helpers\FileHelper;
-use bolden\openweather\assets\OpenWeatherAssets;
-use bolden\openweather\OpenWeather;
+use dotdefine\openweather\assets\OpenWeatherAssets;
+use dotdefine\openweather\OpenWeather;
 use craft\elements\Entry;
 use craft\services\Elements;
 use yii\base\Event;
 use craft\elements\db\ElementQuery;
-use bolden\openweather\records\OpenWeatherCache;
-use bolden\openweather\records\OpenWeatherElement;
-use bolden\openweather\records\OpenWeatherEntry;
+use dotdefine\openweather\records\OpenWeatherCache;
+use dotdefine\openweather\records\OpenWeatherElement;
+use dotdefine\openweather\records\OpenWeatherEntry;
 use yii\db\IntegrityException;
 
 /**
@@ -298,7 +298,7 @@ class OpenWeatherService extends Component
             $data['status'] = 'mist';
         }
         // translation status
-        $data['text'] = \Craft::t('open-weather', $data['status']);
+        $data['text'] = \Craft::t('openweather', $data['status']);
         return $data;
     }
 }

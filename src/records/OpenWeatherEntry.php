@@ -9,7 +9,7 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\records;
+namespace dotdefine\openweather\records;
 
 use craft\db\ActiveRecord;
 

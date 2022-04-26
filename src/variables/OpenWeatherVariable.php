@@ -10,10 +10,10 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather\variables;
+namespace dotdefine\openweather\variables;
 
 use Craft;
-use bolden\openweather\OpenWeather;
+use dotdefine\openweather\OpenWeather;
 
 /**
  * OpenWeather Variable

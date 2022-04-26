@@ -1,5 +1,5 @@
 {
-    "name": "bolden/open-weather",
+    "name": "dotdefine/openweather",
     "description": "Integrate weather information from any location right into your Craft CMS 3 website",
     "type": "craft-plugin",
     "version": "1.0.2",
@@ -11,28 +11,28 @@
         "weather"
     ],
     "support": {
-        "docs": "https://github.com/boldenamsterdam/open-weather/blob/master/README.md",
-        "issues": "https://github.com/boldenamsterdam/open-weather/issues"
+        "docs": "https://github.com/dotdefine/openweather/blob/master/README.md",
+        "issues": "https://github.com/dotdefine/openweather/issues"
     },
     "license": "MIT",
     "authors": [{
-        "name": "Bolden B.V.",
-        "homepage": "https://www.bolden.nl"
+        "name": "dotdefine forked by Bolden B.V.",
+        "homepage": "https://www.dotdefine.com"
     }],
     "require": {
         "craftcms/cms": "^3.0.0"
     },
     "autoload": {
         "psr-4": {
-            "bolden\\openweather\\": "src/"
+            "dotdefine\\openweather\\": "src/"
         }
     },
     "extra": {
         "name": "OpenWeather",
-        "handle": "open-weather",
+        "handle": "openweather",
         "schemaVersion": "1.0.0",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "class": "bolden\\openweather\\OpenWeather"
+        "class": "dotdefine\\openweather\\OpenWeather"
     }
 }

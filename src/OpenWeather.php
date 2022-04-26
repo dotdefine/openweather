@@ -10,7 +10,7 @@
  * @author Klearchos Douvantzis
  */
 
-namespace bolden\openweather;
+namespace dotdefine\openweather;
 
 
 use Craft;
@@ -23,19 +23,19 @@ use craft\web\UrlManager;
 use craft\helpers\FileHelper;
 use craft\helpers\UrlHelper;
 use craft\events\RegisterUrlRulesEvent;
-use bolden\openweather\services\OpenWeatherService;
-use bolden\openweather\models\OpenWeatherSettings;
+use dotdefine\openweather\services\OpenWeatherService;
+use dotdefine\openweather\models\OpenWeatherSettings;
 
 use yii\base\Event;
 use craft\elements\db\ElementQuery;
 use craft\elements\Category;
 use craft\elements\Entry;
 use craft\elements\Asset;
-use bolden\openweather\records\OpenWeatherEntry;
+use dotdefine\openweather\records\OpenWeatherEntry;
 use craft\elements\User;
 use craft\elements\GlobalSet;
 use craft\web\twig\variables\CraftVariable;
-use bolden\openweather\variables\OpenWeatherVariable;
+use dotdefine\openweather\variables\OpenWeatherVariable;
 
 /**
  * Craft plugins are very much like little applications in and of themselves. We’ve made
@@ -103,7 +103,7 @@ class OpenWeather extends Plugin
     protected function settingsHtml() : string
     {
         return \Craft::$app->getView()->renderTemplate(
-            'open-weather/_settings',
+            'openweather/_settings',
             [
                 'settings' => $this->getSettings(),
             ]
@@ -126,10 +126,10 @@ class OpenWeather extends Plugin
         if ($this->isInstalled && $this->getSettings()->enableGeneral == 1) {
             // setup url endpoints
             Event::on(UrlManager::class, UrlManager::EVENT_REGISTER_SITE_URL_RULES, function (RegisterUrlRulesEvent $event) {
-                $event->rules['api/openWeather/lat-lon/<lat:[+-]?([0-9]*[.])?[0-9]+>,<lon:[+-]?([0-9]*[.])?[0-9]+>,?<label:.*?>'] = 'open-weather/default/lat-lon';
-                $event->rules['api/openWeather/default'] = 'open-weather/default/default';
-                $event->rules['api/openWeather/raw/lat-lon/<lat:[+-]?([0-9]*[.])?[0-9]+>,<lon:[+-]?([0-9]*[.])?[0-9]+>,?<label:.*?>'] = 'open-weather/default/lat-lon-raw';
-                $event->rules['api/openWeather/raw/default'] = 'open-weather/default/default-raw';
+                $event->rules['api/openWeather/lat-lon/<lat:[+-]?([0-9]*[.])?[0-9]+>,<lon:[+-]?([0-9]*[.])?[0-9]+>,?<label:.*?>'] = 'openweather/default/lat-lon';
+                $event->rules['api/openWeather/default'] = 'openweather/default/default';
+                $event->rules['api/openWeather/raw/lat-lon/<lat:[+-]?([0-9]*[.])?[0-9]+>,<lon:[+-]?([0-9]*[.])?[0-9]+>,?<label:.*?>'] = 'openweather/default/lat-lon-raw';
+                $event->rules['api/openWeather/raw/default'] = 'openweather/default/default-raw';
             });
 
             // setup twig variable
