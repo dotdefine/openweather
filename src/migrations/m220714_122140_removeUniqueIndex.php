@@ -16,8 +16,8 @@ class m220714_122140_removeUniqueIndex extends Migration
     public function safeUp()
     {
         // Place migration code here...
-        $this->dropIndexIfExists('open_weather_entries_lat_lon_idx', '{{%open_weather_entries}}', true);
-        $this->createIndex('open_weather_entries_lat_lon_idx', '{{%open_weather_entries}}', ['lat', 'lon'], false);
+        $this->dropIndexIfExists('{{%open_weather_entries}}', ['lat', 'lon'], true);
+        $this->createIndexIfMissing('{{%open_weather_entries}}', ['lat', 'lon'], false);
     }
 
     /**
